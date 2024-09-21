@@ -1,0 +1,155 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+/* Logo styling */
+.logo {
+    height: 100px;
+    width: 140px;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    flex: 1; /* Para centrar el título y ocupar el espacio disponible */
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Button container styling */
+.btn-cont {
+    display: flex;
+    gap: 10px;
+}
+
+/* Barra de Navegacion */
+.navegacion {
+    background-color: #565e64;
+    padding: 12.5px;
+    margin-left: 15lvh;
+    margin-right: 15lvh;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+/*Carrusel*/
+.carrusel,.cards{
+    margin-left: 15lvh;
+    margin-right: 15lvh;
+}
+/*Contenedor de las noticias*/
+.cont-noticias{
+    margin-left: 15lvh;
+    margin-right: 15lvh;
+    background-color: white;
+}
+a{
+    color: black;
+}
+a:hover{
+    color:black;
+}
+/*Elementos no Web*/
+.video-cont {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.video {
+    max-width: 100%;
+    height: auto;
+}
+/*Formulario*/
+.formulario{
+    margin-left: 15lvh;
+    margin-right: 15lvh;
+    background-color: white;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 1280px) {
+    .navegacion {
+        margin-left: 7lvh;
+        margin-right: 7lvh;
+    }
+
+    .nav-link {
+        margin: 0 5px; /* Reducir el espaciado entre enlaces */
+    }
+
+    .carrusel,.cards,.cont-noticias,.formulario{
+        margin-left: 7lvh;
+        margin-right: 7lvh;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 10px 0;
+        display: none;
+    }
+
+    .btn-cont {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navegacion {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column; /* Cambiar la dirección del flex */
+        align-items: center; /* Alinear elementos al centro */
+        padding: 10px; /* Reducir el padding */
+    }
+    .carrusel{
+        width: auto;
+    }
+    .contenedor,.cards,.cont-noticias,.formulario {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .img-carrusel{
+        height: 270px;
+    }
+    .nav-link {
+        margin: 5px 0; /* Ajustar márgenes entre enlaces */
+    }
+
+    .adicional{
+        margin-top: 20px;
+    }
+
+}
+
+
+

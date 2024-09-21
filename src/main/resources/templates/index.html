@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Noticioso</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="/assets/Multimedia/Inicio/logo.png">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/estilos.css">
+
+</head>
+
+<body>
+<header>
+    <img class="logo" src="/assets/Multimedia/Inicio/logo.png">
+    <h1>EL NOTICIOSO</h1>
+    <div class="d-grid gap-2 btn-cont">
+        <button class="btn btn-primary btn-inicio" type="button" data-toggle="modal" data-target="#loginModal">Iniciar Sesión</button>
+        <button class="btn btn-outline-secondary btn-reg" type="button" data-toggle="modal" data-target="#registerModal">Registrarse</button>
+    </div>
+    <!-- Modal de Iniciar Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Correo electrónico</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Ingresa tu correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Contraseña</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Recordarme</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="registerName">Nombre</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Correo electrónico</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Ingresa tu correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Crea una contraseña">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerConfirmPassword">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Confirma tu contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-success">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-custom navegacion">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Local</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Regional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Internacional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Archivo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Foro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contactame</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+            </form>
+        </div>
+    </div>
+</nav>
+<br>
+<div id="carouselExampleIndicators" class="carousel slide contenedor carrusel" data-ride="carousel">
+    <!-- Indicadores (puntos) -->
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Contenedor de las imágenes del carrusel -->
+    <div class="carousel-inner">
+        <!-- Primera imagen -->
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/800x400?text=Primera+imagen" class="d-block w-100 img-carrusel" alt="Primera imagen">
+        </div>
+
+        <!-- Segunda imagen -->
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Segunda+imagen" class="d-block w-100 img-carrusel" alt="Segunda imagen">
+            <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+
+        <!-- Tercera imagen -->
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/800x400?text=Tercera+imagen" class="d-block w-100 img-carrusel" alt="Tercera imagen">
+            <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+    </div>
+
+    <!-- Controles de navegación -->
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+<br><br>
+<div class="cards">
+    <div class="row g-3">
+        <!-- Primera carta -->
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h6 class="card-title text-uppercase text-success font-weight-bold">Efemérides E.N</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>476:</strong> Odoacro depone a Rómulo Augústulo, marcando el fin del Imperio Romano.</li>
+                        <li><strong>1886:</strong> Gerónimo, líder apache, se rinde a las tropas de EE.UU.</li>
+                        <li><strong>1944:</strong> Las tropas aliadas liberan Bruselas de la ocupación alemana.</li>
+                        <li><strong>1970:</strong> Salvador Allende es elegido presidente de Chile siendo marxista.</li>
+                        <li><strong>1998:</strong> Larry Page y Sergey Brin fundan Google en Menlo Park, California.</li>
+                        <li><strong>2014:</strong> Se lanza la primera misión, MAVEN, dedicada al estudio de Marte.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Segunda carta -->
+        <div class="col-md-6 adicional">
+            <div class="card h-100">
+                <div class="row no-gutters">
+                    <div class="card-body">
+                        <h6 class="card-title text-uppercase text-primary font-weight-bold">Adicional</h6>
+                        <h5 class="card-title">Rusia y Ucrania</h5>
+                        <p class="card-text"><small class="text-muted">Agosto 23</small></p>
+                        <p class="card-text">Ante la ofensiva de Ucrania, miles de rusos han abandonado la región de Kursk sin saber adónde ir.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Continuar...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<main class="cont-noticias">
+    <div class="row g-5" style="margin: 20px;">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom" style="margin-top: 20px">
+                Principal
+            </h3>
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">El zurdito Maduro adelanta la Navidad</h2>
+                <p class="blog-post-meta">Martes Septiembre 3, 2024.</p>
+                <p>El presidente de Venezuela, Nicolás Maduro, ha anunciado que adelantará la celebración de la Navidad en
+                    el país.
+                    Esta decisión se tomó con el objetivo de brindar alegría y esperanza a los venezolanos en medio de la
+                    crisis económica y social que atraviesa la nación. Maduro hizo el anuncio durante un evento en Caracas,
+                    donde se encendieron las luces navideñas y se decoraron espacios públicos con motivos festivos.
+                    El presidente expresó que esta medida busca fortalecer el espíritu de unión y solidaridad entre los
+                    ciudadanos.</p>
+                <hr>
+                <p>Maduro ha sido conocido por tomar decisiones similares en años anteriores, utilizando las festividades
+                    como una forma
+                    de levantar el ánimo de la población. Sin embargo, esta medida ha generado diversas opiniones entre los
+                    venezolanos,
+                    algunos de los cuales consideran que es una distracción de los problemas reales que enfrenta el país. A
+                    pesar de las críticas,
+                    el gobierno continúa con los preparativos para las celebraciones navideñas adelantadas, esperando que esto
+                    traiga un poco de alegría a las familias venezolanas.</p>
+                <div class="video-cont">
+                    <video src="/assets/Multimedia/Inicio/Videos/Maduro adelanta la Navidad y Edmundo González, ¿prófugo resumen de últimas noticias en Venezuela.mp4"
+                           class="video" controls></video>
+                </div>
+                <br><br>
+                <h2 class="display-5 link-body-emphasis mb-1">Fallecimiento de Alberto Fujimori</h2> <p class="blog-post-meta">Miércoles, 18 de septiembre de 2024.</p> <p>Alberto Fujimori, expresidente de Perú, ha fallecido a los 85 años tras una larga lucha contra problemas de salud. Su muerte ocurrió en una clínica de Lima, donde había estado internado por complicaciones relacionadas con su salud cardiovascular y respiratoria. Fujimori fue presidente de Perú entre 1990 y 2000, y su gobierno estuvo marcado por políticas controvertidas y violaciones a los derechos humanos, así como por la lucha contra el terrorismo en el país.</p> <hr> <p>Su legado es objeto de debate en Perú; mientras algunos lo consideran un líder que trajo estabilidad económica, otros lo ven como un dictador que socavó la democracia. Tras su arresto en 2005 y su posterior extradición desde Chile en 2018, Fujimori cumplía condena por corrupción y violaciones de derechos humanos. Su fallecimiento ha reavivado las discusiones sobre su impacto en la política peruana y las divisiones que aún persisten en la sociedad respecto a su figura.</p>
+            </article>
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky info" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">Más Información</h4>
+                    <p class="mb-0">Hola, esta es una pagina donde se informara con total transparencia lo que sucede en el
+                        Perú y
+                        en el mundo.</p>
+                </div>
+
+                <div>
+                    <h4 class="fst-italic">Mas Noticias</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <img class="bd-placeholder-img" src="/assets/Multimedia/Inicio/Imagenes/descarga.jfif"
+                                     alt="Descripción de la imagen" width="100%" height="96">
+
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Servindi ha publicado su boletín semanal destacando varios hechos importantes en
+                                        el
+                                        ámbito indígena y ambiental.</h6>
+                                    <small class="text-body-secondary">Agosto 15, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <img class="bd-placeholder-img" src="/assets/Multimedia/Inicio/Imagenes/descarga (1).jfif"
+                                     alt="Descripción de la imagen" width="100%" height="96">
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0"> La NASA ha anunciado el descubrimiento de un nuevo exoplaneta que podría tener
+                                        condiciones similares a las de la Tierra.</h6>
+                                    <small class="text-body-secondary">Agosto 28, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <img class="bd-placeholder-img" src="/assets/Multimedia/Inicio/Imagenes/descarga (2).jfif"
+                                     alt="Descripción de la imagen" width="100%" height="96">
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Un festival de cine independiente en Berlín ha destacado varias películas de
+                                        directores emergentes, recibiendo elogios por su innovación y creatividad.</h6>
+                                    <small class="text-body-secondary">January 13, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="formulario">
+    <div class="container mt-5">
+        <br>
+        <h2 class="mb-4 text-center">¡Si tienes alguna noticia, no temas en compartirla!</h2>
+
+        <form>
+            <br>
+            <div class="form-row">
+                <!-- Nombre -->
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+                </div>
+
+                <!-- Apellido -->
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Escribe tu apellido">
+                </div>
+            </div>
+            <br>
+            <!-- Tipo de Noticia -->
+            <div class="form-group">
+                <label for="tipoNoticia">Tipo de Noticia</label>
+                <select class="form-control" id="tipoNoticia">
+                    <option value="" disabled selected>Selecciona el tipo de noticia</option>
+                    <option value="politica">Política</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="entretenimiento">Entretenimiento</option>
+                    <option value="economia">Economía</option>
+                    <option value="tecnologia">Tecnología</option>
+                </select>
+            </div>
+            <br>
+            <!-- Título de la Noticia -->
+            <div class="form-group">
+                <label for="tituloNoticia">Título de la Noticia</label>
+                <input type="text" class="form-control" id="tituloNoticia" placeholder="Escribe el título de la noticia">
+            </div>
+            <br>
+            <!--Resumen -->
+            <div class="form-group">
+                <label for="primerResumen">Resumen de la Noticia</label>
+                <textarea class="form-control" id="primerResumen" rows="3" placeholder="Escribe un breve resumen"></textarea>
+            </div>
+            <br>
+            <br>
+            <!-- Imágenes o Videos -->
+            <div class="form-group">
+                <label for="multimedia">Subir Imágenes o Videos</label>
+                <input type="file" class="form-control-file" id="multimedia" accept="image/*,video/*">
+            </div>
+            <br>
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary btn-block">Enviar Noticia</button>
+        </form>
+    </div>
+</div>
+<br><br>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white py-3">
+    <div class="container">
+        <p class="mb-1">&copy; 2024 Aldo Rivera. Todos los derechos reservados.</p>
+
+        <div class="d-flex justify-content-center">
+            <!-- Twitter -->
+            <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+            </a>
+            <!-- YouTube -->
+            <a href="https://youtube.com" target="_blank" class="text-white mx-2">
+                <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/" target="_blank" class="text-white mx-2">
+                <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/script.js"></script>
+</body>
+</html>
